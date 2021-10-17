@@ -1,16 +1,14 @@
-class Student
-
-  def remove_from_schedule(course, schedule, quarter_id)
-    quarter = schedule.quarter[quarter_id]
-    student_courses = quarter.course_list
-    student_courses.remove(course)
-  end
-
-  def add_to_schedule(course, schedule, quarter_id)
-    quarter = schedule.quarter[quarter_id]
-    course_list = quarter.course_list
-    if course_list.maximum_number_of_courses < 5
-      course_list.add(course)
-    end
-  end
+# Name Mangler
+def reverse_name(name)
+  name.split.reverse.join(' ')
 end
+def append_borg_to_name(name)
+  name << " Borg"
+end
+name = "Johanna Jackson"
+puts "Current Name: #{name}"
+puts "New name: #{name = reverse_name(name)}"
+puts "New borg name: #{name = append_borg_to_name(name)}"
+
+
+#comment as a student. I felt like the names of the functions were pretty clear as to what they did and any comments would have been redundent.
